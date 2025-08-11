@@ -1,2 +1,2 @@
 # DailyPlanner
-A planner for daily tasks
+A planner for daily tasks. Feel free to use whenever!
