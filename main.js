@@ -1,13 +1,18 @@
-id = document.getElementById('inputdata')
-it = document.getElementById('inputtime')
-enter = document.getElementById('enter')
+let id = document.getElementById('inputdata')
+let it = document.getElementById('inputtime')
+let enter = document.getElementById('enter')
 function editPlan() {
-    data = id.value;
-    time = it.value;
+    let data = id.value.trim();
+    let time = it.value.trim();
     if (data && time) {
-        document.querySelector(time).innerHTML = data;
-        id.value = '';
-        it.value = '';
+        let cell = document.querySelector('#' + time);
+        if (cell) {
+            cell.innerHTML = data;
+            id.value = '';
+            it.value = '';
+        } else {
+            alert('Invalid time entered.');
+        }
     } else {
         alert('Please fill in both fields.');
     }
